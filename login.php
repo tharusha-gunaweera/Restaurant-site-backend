@@ -41,12 +41,12 @@ if (isset($_SESSION['verified'])) {
             border-radius: 50%;
         }
         .shape:first-child {
-            background: linear-gradient(#1845ad, #23a2f6);
+            background: linear-gradient(#FEA116, #fe8d16);
             left: -80px;
             top: -80px;
         }
         .shape:last-child {
-            background: linear-gradient(to right, #ff512f, #f09819);
+            background: linear-gradient(to right, #FEA116, #fe8d16);
             right: -30px;
             bottom: -80px;
         }
@@ -108,6 +108,9 @@ if (isset($_SESSION['verified'])) {
             border-radius: 5px;
             cursor: pointer;
         }
+        .hover-button {
+            transition: background-color 0.3s;
+        }
 
         #showErr {
             display: none;
@@ -127,7 +130,7 @@ if (isset($_SESSION['verified'])) {
     <label for="password">Password</label>
     <input type="password" placeholder="Password" name="pass" id="password">
     <div id="showErr"></div>
-    <button type="submit" id="login">Log In</button>
+    <button onmouseover="this.style.backgroundColor='#FEA116'" onmouseout="this.style.backgroundColor='white'" type="submit" id="login">Log In</button>
     <a href="registration.php" id="ihda">I don't have an account</a>
 </form>
 <script src="https://kit.fontawesome.com/54047f67ad.js" crossorigin="anonymous"></script>

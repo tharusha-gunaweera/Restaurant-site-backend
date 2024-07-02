@@ -127,11 +127,6 @@
     //
     //     window.open('login&register.html', 'newwindow', `width=${width},height=${height},left=${left},top=${top}`);
     // });
-    
 
-
-
-    
-    
 })(jQuery);
 

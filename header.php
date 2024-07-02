@@ -20,15 +20,15 @@ $currentPage=basename($_SERVER['PHP_SELF']);
         display: inline-block;
         padding: 10px 20px;
         font-size: 16px;
-        color: #FFD700FF;
+        color: #FEA116;
         background-color: transparent;
-        border: 2px solid gold;
+        border: 2px solid #FEA116;
         border-radius: 5px;
         cursor: pointer;
-        transition: color 0.4s;
         position: relative;
         overflow: hidden;
-        transform: translateY(-10px);
+        transform: uppercase;
+        transition: color 0.4s ease, border-color 0.4s ease;
     }
 
     #signin{
@@ -47,9 +47,9 @@ $currentPage=basename($_SERVER['PHP_SELF']);
         right: -100%;
         width: 100%;
         height: 100%;
-        background-color: gold;
-        transition: right 0.4s;
-        z-index: 0;
+        background-color: #FEA116;
+        transform: uppercase;
+        z-index: 0.1;
     }
 
     .sign-in-btn:hover::before {
@@ -64,6 +64,10 @@ $currentPage=basename($_SERVER['PHP_SELF']);
     .sign-in-btn:hover span {
         color: black;
     }
+    .sign-in-btn:hover {
+    border-color: #000000;
+    }
+
     #logedimg{
         display: none;
         padding: 0;
@@ -88,7 +92,7 @@ $currentPage=basename($_SERVER['PHP_SELF']);
         position: absolute;
         right: 4px;
         bottom: -130px;
-        background: #2d395c;
+        background: #353535;
         height: 150px;
         width: 250px;
     }
@@ -102,7 +106,7 @@ $currentPage=basename($_SERVER['PHP_SELF']);
         content: '';
         top: -5%;
         left: 77%;
-        background: #2d395c;
+        background: #353535;
         height: 20px;
         width: 20px;
         transform: rotate(45deg);
@@ -132,7 +136,7 @@ $currentPage=basename($_SERVER['PHP_SELF']);
     #useremail{
         padding: 0;
         margin: 0;
-        color: #5e9dff;
+        color:  #fff;
         font-style: italic;
     }
     #logout{
@@ -141,11 +145,11 @@ $currentPage=basename($_SERVER['PHP_SELF']);
         align-items: center;
         margin: 35px 0 0 0;
         padding: 15px 0 0 0;
-        background-color: #1f2940;
-        color: #3c91e6;
+        background-color: #232323;
+        color: #232323;
         border: none;
         outline: none;
-        border-top: 2px solid #1f2940;
+        border-top: 2px solid #232323;
     }
 
     #logout a {
@@ -172,18 +176,26 @@ $currentPage=basename($_SERVER['PHP_SELF']);
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-3 py-3 py-lg-0">
     <img src="img/Resturent Logo1.png" weght="100" hegiht="150" alt="Logo">
     <div class="collapsenavbar-collapse" id="navbar Collapse">
-            <div class="navbar-nav ms-auto py-0 pe-0">
+        <div class="navbar-nav ms-auto py-0 pe-0">
             <a href="index.php" class="nav-item nav-link <?php if($currentPage =='index.php'){ echo 'active';}?>">Home</a>
             <a href="about.php" class="nav-item nav-link <?php if($currentPage =='about.php'){ echo 'active';}?>">About Us</a>
             <a href="menu.php" class="nav-item nav-link <?php if($currentPage =='menu.php'){ echo 'active';}?>">Menu</a>
             <a href="contact.php" class="nav-item nav-link <?php if($currentPage =='contact.php'){ echo 'active';}?>">Contact</a>
             <a href="reservation.php" class="nav-item nav-link <?php if($currentPage =='reservation.php'){ echo 'active';}?>">Reservation</a>
-            <div class="image-container" id="icon" alt="User Icon" style="cursor: pointer;" >
-                <a href="login.php" id="loginbtn"><button class="sign-in-btn nav-item nav-link " id="signin"><span class="m-5">Sign in</span></button></a>
-                <img src="img/pngwing.com 5y.png"  alt="Hover Image" class="nav-item nav-link" id="logedimg">
-                <div id="userMenu">
-                    <div class="details">
-                        <img src="img/user.png" class="logedimg" alt="image">
+            <div>
+              <a href="login.php" id="loginbtn"><button class="sign-in-btn nav-item nav-link" id="signin"><span class="m-5 ">Sign in</span></button></a>
+                <div class="image-container" id="logedimg" alt="User Icon" style="cursor: pointer;" >
+
+                  <img src="img/profile.png"   alt="Hover Image" class=" default-image" >
+                  <img src="img/profile y.png"   alt="Hover Image" class="hover-image">
+
+                </div>
+                <div id="userMenu" >
+                    <div class="details image-container" >
+
+                        <img src="img/user1.png" class="logedimg default-image" alt="Hover Image">
+                        <img src="img/user2.png"   alt="Hover Image" class="logedimg hover-image">
+
                         <div class="userEmail">
                             <p id="username"><?php echo $_SESSION['uname']?></p>
                             <p id="useremail"><?php echo $_SESSION['email']?></p>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['uname'])){
-    header('location:../login.php');
+    header('location:login.php');
 }
 ?>
 <!DOCTYPE html>
@@ -145,11 +145,11 @@ if(!isset($_SESSION['uname'])){
                 <div class="rowf g-5">
                     <div class="col-lg-3 col-md-6">
                         <h3 class="section-title">Quick Links</h3>
-                        <a class="btn btn-link" href="index.html">Home</a>
-                        <a class="btn btn-link" href="about.html">About Us</a>
-                        <a class="btn btn-link" href="menu.html">Menu</a>
-                        <a class="btn btn-link" href="contact.html">Contact</a>
-                        <a class="btn btn-link" href="reservation.html">Reservation</a>
+                        <a class="btn btn-link" href="index.php">Home</a>
+                        <a class="btn btn-link" href="about.php">About Us</a>
+                        <a class="btn btn-link" href="menu.php">Menu</a>
+                        <a class="btn btn-link" href="contact.php">Contact</a>
+                        <a class="btn btn-link" href="reservation.php">Reservation</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="section-title">Contact</h3>
@@ -157,10 +157,10 @@ if(!isset($_SESSION['uname'])){
                         <p class="mb-2"><i class="fa fa-phone-alt me-3 icon"></i>+94 345 67890</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3 icon"></i> moonhouserestaurent@gmail.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://x.com/i/flow/login" class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a href="https://web.facebook.com/?_rdc=1&_rdr" class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/" class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/home?originalSubdomain=lk" class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -174,8 +174,7 @@ if(!isset($_SESSION['uname'])){
                         <h3 class="section-title">Sing Up</h3>
                         <p>Join us to our newsletter to receive upcoming promotions and events at Moon House.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                        <a href="login.php" id="loginbtn"> <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button></a>
                         </div>
                     </div>
                 </div>
@@ -186,14 +185,7 @@ if(!isset($_SESSION['uname'])){
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="index.html">MOON HOUSE RESTAURENT</a>, All Right Reserved. 
                         </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="index.html">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

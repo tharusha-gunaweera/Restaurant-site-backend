@@ -50,12 +50,12 @@ if(isset($_SESSION['username_not'])){
             border-radius: 50%;
         }
         .shape:first-child {
-            background: linear-gradient(#1845ad, #23a2f6);
+            background: linear-gradient(#FEA116, #fe8d16);
             left: -80px;
             top: -80px;
         }
         .shape:last-child {
-            background: linear-gradient(to right, #ff512f, #f09819);
+            background: linear-gradient(to right, #FEA116, #fe8d16);
             right: -30px;
             bottom: -80px;
         }
@@ -116,7 +116,13 @@ if(isset($_SESSION['username_not'])){
             font-weight: 600;
             border-radius: 5px;
             cursor: pointer;
+        
         }
+        .hover-button {
+            transition: background-color 0.3s;
+        }
+
+
         #showErr {
             margin: 10px 0 0 0;
             display: none;
@@ -144,7 +150,7 @@ if(isset($_SESSION['username_not'])){
     <label for="con-password">Confirm password</label>
     <input type="password" placeholder="Re-enter password" id="con-password">
     <div id="showErr"></div>
-    <button type="submit">Create</button>
+    <button onmouseover="this.style.backgroundColor='#FEA116'" onmouseout="this.style.backgroundColor='white'" type="submit">Create</button>
     <a href="login.php" id="ihda">I already have an account</a>
 </form>
 <script>

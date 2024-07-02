@@ -607,6 +607,17 @@ body {
 
 }
 
+#bookingerr{
+    display: none;
+    color: #e30101;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+#sendpName{
+    display: none;
+}
+
 
 
 
